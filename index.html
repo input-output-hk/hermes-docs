@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hermes - Advanced P2P Node - Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Courier New', monospace;
       background-color: #000000;
       margin: 0;
       padding: 0;
@@ -15,17 +15,106 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      font-family: 'Teko', sans-serif;
+      font-size: 72px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .neon-char {
+      display: inline-block;
+      animation: neon-flicker 1s infinite alternate;
+    }
+
+    .char-green {
       color: #00ff00;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
+    .char-blue {
+      color: #0000ff;
+    }
+
+    .char-pink {
+      color: #ff00ff;
+    }
+
+    .char-yellow {
+      color: #ffff00;
+    }
+
+    .char-purple {
+      color: #800080;
+    }
+
+    .subtitle {
+      font-family: 'Teko', sans-serif;
+      font-size: 48px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #00ff00;
+      opacity: 0;
+      animation: neon-flicker 2s infinite alternate;
+    }
+
+    @keyframes neon-flicker {
+      0% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hermes - Advanced P2P Node - Coming Soon</h1>
+  <div class="container">
+    <div class="title">
+      <span class="neon-char char-green">H</span>
+      <span class="neon-char char-blue">E</span>
+      <span class="neon-char char-pink">R</span>
+      <span class="neon-char char-yellow">M</span>
+      <span class="neon-char char-purple">E</span>
+      <span class="neon-char char-green">S</span>
+      <br>
+      <span class="neon-char char-blue">A</span>
+      <span class="neon-char char-pink">d</span>
+      <span class="neon-char char-yellow">v</span>
+      <span class="neon-char char-purple">a</span>
+      <span class="neon-char char-green">n</span>
+      <span class="neon-char char-blue">c</span>
+      <span class="neon-char char-pink">e</span>
+      <span class="neon-char char-yellow">d</span>
+      <span class="neon-char char-yellow"> </span>
+      <span class="neon-char char-purple">P</span>
+      <span class="neon-char char-green">2</span>
+      <span class="neon-char char-blue">P</span>
+      <span class="neon-char char-blue"> </span>
+      <span class="neon-char char-pink">N</span>
+      <span class="neon-char char-yellow">o</span>
+      <span class="neon-char char-purple">d</span>
+      <span class="neon-char char-green">e</span>
+    </div>
+    <div class="subtitle">
+      Coming Soon
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to animate the subtitle after the page loads
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const subtitle = document.querySelector('.subtitle');
+      subtitle.style.opacity = '1';
+      subtitle.style.animation = 'glowing 2s linear infinite';
+    });
+  </script>
 </body>
 </html>
